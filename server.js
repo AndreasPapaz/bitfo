@@ -14,8 +14,8 @@ app.use(express.static(__dirname + '/public/assets'));
 //Make Public Folder Static
 app.use(express.static('public'));
 
-const routes = requruire('./controllers/controller');
-app.use('/', routes);
+//Routes
+require('./controllers/controller')(app);
 
 app.listen(PORT, () => {
 	console.log("BITFO : ", PORT);
