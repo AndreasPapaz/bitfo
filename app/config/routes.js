@@ -1,6 +1,15 @@
-import React form 'react';
-import router from 'react-router';
+import React from 'react'
+import { BrowserRouter as Router, Route, Link, IndexRoute } from 'react-router-dom';
 
-const Route = router.Route;
-const Router = router.Router;
-const hashHistory = router.hashHistory;
+import Main from '../components/Main';
+
+
+export default (
+
+	<Router>
+		<div>
+			<Route exact path='/' component={Main} />
+		</div>
+	</Router>
+
+);
