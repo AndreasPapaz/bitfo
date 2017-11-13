@@ -1,12 +1,12 @@
 const axios = require('axios');
-const Twit = require('twit');
+const Twitter = require('twitter');
+
 
 const T = new Twit({
 	consumer_key: 'WLFFeOKBTfhyU4z0vgBJG3UGU',
-	consumer_secret: '	HK4B6YM3jDm0f442Q51YBbuNmAhHF4l6QQ7eh0FF3eyub7FvP7',
-	access_token: '	830091872970346497-w9ghin4Hy3xUuZ2x0lVUe1frOReXezD',
+	consumer_secret: 'HK4B6YM3jDm0f442Q51YBbuNmAhHF4l6QQ7eh0FF3eyub7FvP7',
+	access_token: '830091872970346497-w9ghin4Hy3xUuZ2x0lVUe1frOReXezD',
 	access_token_secret: '	pxLXiy1JlKQDnjUdPJnC373S6PJZk6BsCkzgXLejWnuBR',
-	timeout_ms: 60*1000,
 });
 
 
@@ -17,8 +17,8 @@ const helper = {
 	},
 
 	some_test: function() {
-		T.get('search/tweets', { q: 'banana since:2011-07-11', count: 100 }, function(err, data, response) {
-			console.log(data)
+		T.get('/', { q: 'banana since:2011-07-11', count: 100 }, function(err, data, response) {
+			console.log(data);
 		})
 	}
 

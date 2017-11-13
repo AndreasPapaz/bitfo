@@ -17,18 +17,8 @@ export default class Main extends Component {
 
 	componentWillMount() {
 		console.log("DID MOUNT")
-		helper.some_test().then(function(res) {
-			console.log('from the helper');
-			console.log(res)
-		});
+		helper.some_test();
 	}
-
-	// componentDidMount() {
-	// 	helpers.runQuery().then(function(res) {
-	// 		console.log('from the helper');
-	// 		console.log(res)
-	// 	});
-	// }
 
 	render() {
 		return(
